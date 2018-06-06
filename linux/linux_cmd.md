@@ -1,4 +1,4 @@
-# 常用命令
+## 常用命令
 cd ~ ： 回家(回根目录)  
 touch xxx   创建文件或用nano  
 
@@ -6,31 +6,31 @@ mkdir 文件夹1/文件夹2/文件夹3  文件夹1里面创建文件夹2，文�
 
 gedit xxx   打开文件，没有就创建 或用vi nano    
 
-man + 命令 / man ls (查看ls命令的相关用法)  
+man 命令名   查看命令的相关用法  
 
 cat   查看文件或用more less nano  
 
 rm -rf 文件夹名 (删除非空文件夹,此命令要慎用，可以删除所有文件，包括系统文件)  
 
-> 文件.txt 重定向，覆写整个文件  
->> 文件.txt 重定向，追加  
+"> xxx.txt"      重定向，覆写整个文件  
+">> xxx.txt"     重定向，追加  
 
 ls -alh | more  管道  
 
-ln -s 原文件名 新文件名   创建快捷方式（软链接文件(删除原文件将失效))  
-ln 原文档名 新文档名      硬链接文件(删除原文件仍然有效 类似复制)  
+ln -s  原文件名 新文件名   创建快捷方式（软链接文件(删除原文件将失效))  
+ln     原文档名 新文档名      硬链接文件(删除原文件仍然有效 类似复制)  
 
-tar -cvf xxx.tar 放进去的文件  
-tar -xvf xxx.tar 解包  
-tar -zcvf xxx.tar.gz (-C /制定路径)yyy zzz  打包和压缩（更精简）  
-tar -zxvf xxx.tar.gz  解压缩  
+tar -cvf xxx.tar                            放进去的文件  
+tar -xvf xxx.tar                            解包  
+tar -zcvf xxx.tar.gz (-C /制定路径)yyy zzz   打包和压缩（更精简）  
+tar -zxvf xxx.tar.gz                        解压缩  
 
-which 命令  查看命令路径  
-cal  查看日历  
-date  查看当前时间  
+which 命令   查看命令路径  
+cal         查看日历  
+date        查看当前时间  
 
-ps aux  查看所有运行进程  
-top  持续显示运行进程  
+ps aux   查看所有运行进程  
+top      持续显示运行进程  
 
 kill -9 PID  强制结束进程  
 
@@ -51,5 +51,5 @@ sudo apt-get clean         清理所有软件缓存 OK(电脑上存储的安装�
 sudo apt-get autoremove    删除系统不再使用的孤立软件  
 
 
-# 网络资源
+## 网络资源
 [常用命令](https://zhuanlan.zhihu.com/p/37666424)  
