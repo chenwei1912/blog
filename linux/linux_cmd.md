@@ -46,10 +46,17 @@ chmod a+x file   u:owner g:group o:other a:all rwx r=4,w=2,x=1
 sudo -s      切换到root  
 
 dpkg --list                查看已安装的软件包列表  
-sudo apt-get autoclean     清理旧版本的软件缓存 OK(已经卸载掉的软件包)  
-sudo apt-get clean         清理所有软件缓存 OK(电脑上存储的安装包)  
-sudo apt-get autoremove    删除系统不再使用的孤立软件  
 
+apt-get update    # 更新安装源信息库  
+apt-get update    # 更新已安装软件  
+
+apt-get --purge remove <package>  # 删除软件及其配置文件  
+apt-get purge                     # 和上面相同  
+apt-get autoremove <package>      # 删除没用的依赖包(保留配置文件)  
+apt-get autoclean     清理旧版本的软件缓存(已经卸载掉的软件包)  
+apt-get clean         清理所有软件缓存(电脑上存储的安装包)  
+
+源码安装时 ./configure --prefix 指定安装目录，卸载时直接删除整个目录  
 
 ## 网络资源
 [常用命令](https://zhuanlan.zhihu.com/p/37666424)  
