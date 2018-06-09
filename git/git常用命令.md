@@ -16,19 +16,21 @@ mt = mergetool
 `git remote -v` 显示远程主机url  
 `git remote show <主机名>` 显示远程主机详细信息  
 
-`git clone -b <远程分支名> url` clone远程指定分支  
+`git clone -b <远程分支名> url <本地目录名>` clone远程指定分支到本地目录  
 
 `git push <远程主机名> <本地分支名>:<远程分支名>`  
 `git push origin master`  本地master分支推送到远程主机origin  push后加-u表示本地master和远程master关联  
 `git push origin :master` 等同于 git push origin --delete master  
 
-`git fetch origin master` 从远程主机origin的master分支下载最新的版本到本地分支origin/master(不强制合并有冲突的信息)  
+`git fetch origin master` 从远程主机origin的master分支下载更新到本地分支origin/master(不合并)  
 `git fetch origin branch1:branch2`  使用远程branch1分支在本地创建branch2(不切换)，不存在branch2则自动创建  
 
-`git pull <远程主机> <远程分支>:<本地分支>`  fetch and merge  
+`git pull <远程主机> <远程分支>:<本地分支>`  相当于先fetch再merge  
 
 `git log -p master..origin/master` 比较本地master分支和远程分支的差别  
 `git merge origin/master` 在当前分支上合并远程分支  
+
+`git branch --set-upstream master origin/next` 手动建立本地分支和远程分支的追踪关系(tracking)
 
 # github ssh
 `ssh-keygen -t rsa -C "xxx@yyy.com"`
